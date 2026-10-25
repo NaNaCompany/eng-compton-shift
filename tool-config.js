@@ -1,0 +1,50 @@
+export const tool={
+  "id": "E115",
+  "slug": "eng-compton-shift",
+  "title": "콤프턴 산란 파장변화 계산기",
+  "title_en": "Compton Scattering Wavelength Shift Calculator",
+  "category": "양자",
+  "category_en": "Quantum",
+  "fields": [
+    {
+      "key": "mass",
+      "label": "처음 정지한 표적의 질량 m",
+      "label_en": "Initially stationary target mass m",
+      "dimension": "mass",
+      "example": 9.1093837139e-31,
+      "constraint": "positive",
+      "display_unit": "u",
+      "display_value": "0.00054857990904271002"
+    },
+    {
+      "key": "theta",
+      "label": "광자 산란각 θ",
+      "label_en": "Photon scattering angle θ",
+      "dimension": "angle",
+      "example": 1.5707963267948966,
+      "constraint": "nonnegative",
+      "display_unit": "rad",
+      "display_value": "1.5707963267948966"
+    }
+  ],
+  "result_label": "파장 증가량 Δλ",
+  "result_label_en": "Wavelength increase Δλ",
+  "result_dimension": "length",
+  "formula": "Δλ = (h/(mc))(1−cos θ) = (2h/(mc))sin²(θ/2)",
+  "purpose": "정지한 자유 표적에 의한 광자 산란의 파장 증가량을 계산한다.",
+  "purpose_en": "Calculate the photon wavelength increase when scattering from an initially stationary free target.",
+  "assumptions": "m>0이며 0≤θ≤π다. θ는 입사 광자 방향과 산란 광자 방향 사이 각도다. 표적은 처음 정지한 자유 입자로 취급하며 결합에너지·집단 산란·매질 효과는 제외한다. 출력은 산란 후 파장 자체가 아니라 증가량이다. 작은 각도에서는 동치인 sin² 식으로 뺄셈 손실을 줄인다.",
+  "assumptions_en": "Required: m>0 and 0≤θ≤π. θ is the angle between the incident and scattered photon directions. The target is an initially stationary free particle. Excluded: binding, collective scattering and medium effects. The output is the wavelength increase. An equivalent sine-squared form avoids cancellation at small angles.",
+  "sources": [
+    {
+      "label": "OpenStax · Compton effect",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/6-3-the-compton-effect"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "output_unit": "pm",
+  "site": "https://nanalab.kr/eng-compton-shift/",
+  "repository": "https://github.com/NaNaCompany/eng-compton-shift",
+  "groups": []
+};

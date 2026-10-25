@@ -1,0 +1,47 @@
+{
+  "id": "E115",
+  "value": 2.426310235380317e-12,
+  "value_70_digits": "2.426310235380317069276567962499512865713191093410044756106414594310589e-12",
+  "method": "Independent Python Decimal (90 working digits, 70-digit report); direct analytical formulas, Decimal square roots/exponentials and argument-reduced Taylor sine. SI decimal spellings are used except explicitly marked exact-binary64 regression fixtures. No JavaScript imports.",
+  "cases": [
+    {
+      "name": "Forward scattering has exactly zero shift",
+      "values": {
+        "theta": 0
+      },
+      "expected": 0.0,
+      "expected_70_digits": "0"
+    },
+    {
+      "name": "Backscattering has the maximum shift",
+      "values": {
+        "theta": 3.141592653589793
+      },
+      "expected": 4.852620470760634e-12,
+      "expected_70_digits": "4.852620470760634231875441245633044062558861382946819653498685872245598e-12"
+    },
+    {
+      "name": "Very small scattering angle avoids subtractive cancellation",
+      "values": {
+        "theta": 1e-08
+      },
+      "expected": 1.2131551176901585e-28,
+      "expected_70_digits": "1.213155117690158547859234330656956979275560943096597411972900224364266e-28"
+    },
+    {
+      "name": "Doubling target mass halves the shift",
+      "values": {
+        "mass": 1.82187674278e-30
+      },
+      "expected": 1.2131551176901585e-12,
+      "expected_70_digits": "1.213155117690158534638283981249756432856595546705022378053207297155294e-12"
+    },
+    {
+      "name": "Scattering angle above 180 degrees is rejected",
+      "values": {
+        "theta": 3.2
+      },
+      "throws": true
+    }
+  ]
+}
